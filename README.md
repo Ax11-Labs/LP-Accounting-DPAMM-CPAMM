@@ -8,7 +8,7 @@ DPAMM should handle liquidity contribution and net total of each liquidity posit
 
 ## Environment
 
-- We assume no trading fees in the calculation, keeping the constant(K) of remains stable.
+- We assume no trading fees in the calculation, keeping the constant(K) after each trade stable.
 - There are only three liquidity providers in the pool, and each of them contributes their liquidity at different a time interval.
 - Each of liquidity providers has to withdraw liquidity at a different interval.
 - There are swaps happen in between liquidity deposits and withdrawals.
