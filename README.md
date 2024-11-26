@@ -36,7 +36,11 @@ lpCPAMM.py
 Clone this repository
 `git clone https://github.com/Ax11-Labs/LP-Accounting-DPAMM-CPAMM.git`
 
-Go to the downloaded repo, make sure you have [Python3](https://www.python.org/downloads/) on your computer, and run:
+Go to the downloaded repo, make sure you have [Python3](https://www.python.org/downloads/) on your computer.
+
+Define your file path in `./test/tLpCPAMM.py` and `./test/tLpDPAMM.py` by changing the value in this line: `sys.path.insert(0,'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src') # add your path`
+
+Run the following command in terminal:
 `python3 ./test/tLpCPAMM.py`
 
 Adjust the value within the `./src/tCPAMM.py` and `./src/tDPAMM.py` as you like for more experiments.
