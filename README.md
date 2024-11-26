@@ -28,4 +28,19 @@ DPAMM should handle liquidity contribution and net total of each liquidity posit
 
 ## Result Summary
 
-incoming.
+lpCPAMM.py
+![result](cpammResult.png)
+
+## Guide
+
+Clone this repository
+`git clone https://github.com/Ax11-Labs/LP-Accounting-DPAMM-CPAMM.git`
+
+Go to the downloaded repo, make sure you have [Python3](https://www.python.org/downloads/) on your computer, and run:
+`python3 ./test/tLpCPAMM.py`
+
+Adjust the value within the `./src/tCPAMM.py` and `./src/tDPAMM.py` as you like for more experiments.
+
+## Use and Contribution
+
+This repository is made open-source with the MIT license. In short, feel free to do whatever you want.
