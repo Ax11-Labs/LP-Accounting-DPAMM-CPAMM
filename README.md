@@ -28,8 +28,15 @@ DPAMM should handle liquidity contribution and net total of each liquidity posit
 
 ## Result Summary
 
-lpCPAMM.py
-![result](cpammResult.png)
+The results indicate that we have successfully passed all the tests, establishing this experiment as proof that the newly implemented liquidity accounting mechanism of DPAMM effectively facilitates accurate fund allocation within the protocol.
+
+#### Result from CPAMM
+
+![resultCPAMM](cpammResult.png)
+
+#### Result from DPAMM
+
+![resultDPAMM](dpammResult.png)
 
 ## Guide
 
@@ -41,9 +48,9 @@ Go to the downloaded repo, make sure you have [Python3](https://www.python.org/d
 Define your file path in `./test/tLpCPAMM.py` and `./test/tLpDPAMM.py` by changing the value in this line: `sys.path.insert(0,'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src') # add your path`
 
 Run the following command in terminal:
-`python3 ./test/tLpCPAMM.py`
+`python3 ./test/tLpCPAMM.py && python3 ./test/tLpDPAMM.py`
 
-Adjust the value within the `./src/tCPAMM.py` and `./src/tDPAMM.py` as you like for more experiments.
+For your own experiments, adjust the value within the `./test/tLpCPAMM.py` and `./test/tLpDPAMM.py`.
 
 ## Use and Contribution
 

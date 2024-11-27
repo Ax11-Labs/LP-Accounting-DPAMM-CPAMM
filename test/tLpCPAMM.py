@@ -6,7 +6,7 @@ from lpCPAMM import deposit,withdraw
 # Pool Variable
 balanceX = 0
 balanceY = 0
-totalLP = math.sqrt(balanceX*balanceY)
+totalLP = 0
 
 # LP's holding
 Lp1 = 0
@@ -22,13 +22,7 @@ holdX3 = 0
 holdY3= 0
 
 def getK():
-    return balanceX*balanceY
-
-def getTotalLP():
-    return math.sqrt(getK())
-
-# def updateHolding(operation, amountX, amountY):
-    
+    return balanceX*balanceY  
 
 def testLpCPAMM():
     global totalLP
@@ -56,7 +50,6 @@ def testLpCPAMM():
     print("LP1/pool has LP tokens: ", totalLP)
     print("--------------------------")
 
-
     #1st swap
     k = getK()
     balanceX -= (balanceX/5) #20% of balance X if traded out
@@ -75,7 +68,6 @@ def testLpCPAMM():
     print("+++++ Lp2 provide liquidty with the same x and y as current LP1's")
     print("COMPARE: LP1 and LP2 have the same amount of LP tokens = ", Lp2 ,', ', Lp1)
     print("--------------------------")
-    # print(totalLP)
     
     #2nd swap
     k = getK()
@@ -84,7 +76,6 @@ def testLpCPAMM():
     print()
     print("+++++ 2nd Swap")
     print("--------------------------")
-
 
     #Lp2 withdraw
     holdX2, holdY2 = withdraw(Lp2, k, totalLP, balanceX, balanceY)
@@ -138,8 +129,8 @@ def testLpCPAMM():
     balanceY -= holdY3
     print()
     print("+++++ LP3 withdraw all liquidity")
-    print("balanceX equal to 2x of holdX2 = ", balanceX,', ', holdX3)
-    print("COMPARE: balanceY equal to 2x of holdY2 = ",balanceY,', ', holdY3)
+    print("COMPARE: balanceX equal to 2x of holdX3 = ", balanceX,', ', holdX3)
+    print("COMPARE: balanceY equal to 2x of holdY3 = ",balanceY,', ', holdY3)
     print("--------------------------")
     
 testLpCPAMM()
