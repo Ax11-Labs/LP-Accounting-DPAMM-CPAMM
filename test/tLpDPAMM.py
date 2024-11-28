@@ -50,7 +50,7 @@ def testLpDPAMM():
     global holdY3
 
     #Lp1 deposit + initiate the price to be as x=700 and y=1000 as in CPAMM
-    priceX = 1000/700 # y/x in CPAMM
+    priceX = 10000/700 # y/x in CPAMM
     LpX1, LpY1 = deposit(holdX1,holdY1, priceX)
     totalLpX += LpX1
     totalLpY += LpY1
@@ -126,7 +126,7 @@ def testLpDPAMM():
     print()
     print("+++++ Lp1 deposit more 1/4 of his current liquidity")
     print("LP1/pool has LPX tokens: ", LpX1)
-    print("LP1/pool has LPX tokens: ", LpY1)
+    print("LP1/pool has LPY tokens: ", LpY1)
     print("--------------------------")
 
     #Lp3 deposit liquidity, 50% of LP1's value
