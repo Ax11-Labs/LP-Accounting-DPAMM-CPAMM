@@ -32,22 +32,7 @@ def getRatio():
     return balanceY/balanceX
 
 def testLpDPAMM():
-    global totalLpX
-    global totalLpY
-    global balanceX
-    global balanceY
-    global LpX1
-    global LpY1 
-    global LpX2
-    global LpY2
-    global LpX3
-    global LpY3 
-    global holdX1
-    global holdY1
-    global holdX2
-    global holdY2
-    global holdX3
-    global holdY3
+    global totalLpX, totalLpY, balanceX, balanceY, LpX1, LpY1 , LpX2, LpY2, LpX3, LpY3 , holdX1, holdY1, holdX2, holdY2, holdX3, holdY3
 
     #Lp1 deposit + initiate the price to be as x=700 and y=1000 as in CPAMM
     priceX = 10000/700 # y/x in CPAMM

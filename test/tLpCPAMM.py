@@ -25,18 +25,7 @@ def getK():
     return balanceX*balanceY  
 
 def testLpCPAMM():
-    global totalLP
-    global balanceX
-    global balanceY
-    global Lp1
-    global Lp2
-    global Lp3
-    global holdX1
-    global holdY1
-    global holdX2
-    global holdY2
-    global holdX3
-    global holdY3
+    global totalLP, balanceX, balanceY, Lp1, Lp2, Lp3, holdX1, holdY1, holdX2, holdY2, holdX3, holdY3
 
     #Lp1 deposit
     totalLP = deposit(holdX1,holdY1, 0,0,0,0)
