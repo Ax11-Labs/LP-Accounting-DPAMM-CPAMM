@@ -1,6 +1,6 @@
 import math
 import sys
-sys.path.insert(0,'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src/') # add your path
+sys.path.insert(0,r'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src') # add your path
 from lpDPAMM import deposit,withdraw
 
 # Pool Variable
@@ -36,7 +36,7 @@ def testLpDPAMM():
 
     #Lp1 deposit + initiate the price to be as x=700 and y=1000 as in CPAMM
     priceX = 10000/700 # y/x in CPAMM
-    LpX1, LpY1 = deposit(holdX1,holdY1, priceX)
+    LpX1, LpY1 = deposit(holdX1,holdY1, priceX, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX += LpX1
     totalLpY += LpY1
     balanceX+=holdX1
@@ -63,7 +63,7 @@ def testLpDPAMM():
     print("--------------------------")
 
     #Lp2 deposit
-    LpX2, LpY2 = deposit(balanceX, balanceY, priceX)
+    LpX2, LpY2 = deposit(balanceX, balanceY, priceX, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX += LpX2
     totalLpY += LpY2
     balanceX*=2
@@ -87,7 +87,7 @@ def testLpDPAMM():
     print("--------------------------")
 
     #Lp2 withdraw
-    holdX2, holdY2 = withdraw(LpX2, LpY2, priceX)
+    holdX2, holdY2 = withdraw(LpX2, LpY2, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX -= LpX2
     totalLpY -= LpY2
     LpX2=0
@@ -101,7 +101,7 @@ def testLpDPAMM():
     print("--------------------------")
 
     #Lp1 add liquidity to the pool (25% more than he currently has)
-    newLpX1, newLpY1 = deposit(balanceX/4, balanceY/4, priceX)
+    newLpX1, newLpY1 = deposit(balanceX/4, balanceY/4, priceX, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX += newLpX1
     totalLpY += newLpY1
     LpX1 += newLpX1
@@ -115,7 +115,7 @@ def testLpDPAMM():
     print("--------------------------")
 
     #Lp3 deposit liquidity, 50% of LP1's value
-    LpX3, LpY3 = deposit(balanceX/2, balanceY/2, priceX)
+    LpX3, LpY3 = deposit(balanceX/2, balanceY/2, priceX, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX += LpX3
     totalLpY += LpY3
     balanceX += balanceX/2
@@ -141,7 +141,7 @@ def testLpDPAMM():
     print("--------------------------")
 
     #LP3 withdraw all liquidity
-    holdX3, holdY3 = withdraw(LpX3, LpY3, priceX)
+    holdX3, holdY3 = withdraw(LpX3, LpY3, totalLpX, totalLpY, balanceX, balanceY)
     totalLpX -= LpX3
     totalLpY -= LpY3
     LpX3=0

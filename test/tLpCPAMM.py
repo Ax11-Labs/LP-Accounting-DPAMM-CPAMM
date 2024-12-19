@@ -1,6 +1,6 @@
 import math
 import sys
-sys.path.insert(0,'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src') # add your path
+sys.path.insert(0,r'/DEFINE-YOUR-PATH-HERE/LP-Accounting-DPAMM-CPAMM/src') # add your path
 from lpCPAMM import deposit,withdraw
 
 # Pool Variable
